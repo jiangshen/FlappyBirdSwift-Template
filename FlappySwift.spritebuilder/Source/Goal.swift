@@ -10,6 +10,10 @@ import UIKit
 
 class Goal: CCNode {
 
+    func didLoadFromCCB() {
+        self.physicsBody.sensor = true
+        self.physicsBody.collisionType = "goal"
+    }
     
 }
 

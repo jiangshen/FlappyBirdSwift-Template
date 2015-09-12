@@ -24,4 +24,9 @@ class Obstacle: CCNode {
         self.position = CGPoint(x:self.position.x, y:minimumYPosition + (random * range))
     }
     
+    func didLoadFromCCB() {
+        _topPipe.physicsBody.sensor = true
+        _bottomPipe.physicsBody.sensor = true
+    }
+    
 }
